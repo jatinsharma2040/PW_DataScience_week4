@@ -1,0 +1,70 @@
+#OOps in Python
+# a = 1
+# print(type(a))
+# b = "pwskills"
+# print(type(b))
+#
+# #creation of class
+# class test:
+#     pass
+# a = test()
+# print(type(a))
+#
+# class pwskills:
+#     def welcome_msg(self):
+#         print("Welcome to pwsills")
+#
+# jatin = pwskills()
+# print(type(jatin))
+# print(jatin.welcome_msg())
+#
+# sudh = pwskills()
+# print(sudh.welcome_msg())
+
+class pwskills1:
+
+    def __init__(self,phone_number,email_id,student_id):
+        self.phone_number = phone_number
+        self.email_id = email_id
+        self.student_id = student_id
+
+    def return_student_details(self):
+        return self.phone_number,self.email_id,self.student_id
+
+brock = pwskills1(1234567890,"brock@gmail.com",123654)
+# print(brock.return_student_details())
+
+jatin = pwskills1(856985586,"jatin@gmail.com",111)
+# print(jatin.return_student_details())
+
+print(jatin.phone_number)
+print(brock.email_id)
+
+class pwskills2:
+
+    def __init__(self,phone_number,email_id,student_id):
+        self.phone_number1 = phone_number
+        self.email_id1 = email_id
+        self.student_id1 = student_id
+
+    def return_student_details(self):
+        return self.phone_number1,self.email_id1,self.student_id1
+
+puneet=pwskills2(23658975,"puneet@gmail.com",110)
+print(puneet.phone_number1) #only this one is available
+# print(puneet.phone_number) #this one not.
+
+print(puneet.return_student_details())
+
+class pwskills3:
+
+    def __init__(aj,phone_number,email_id,student_id):
+        aj.phone_number = phone_number
+        aj.email_id = email_id
+        aj.student_id = student_id
+
+    def return_student_details(aj):
+        return aj.phone_number,aj.email_id,aj.student_id
+
+gagan = pwskills3(56565996,"gagan@gmail.com",232)
+print(gagan.return_student_details())
