@@ -1,0 +1,66 @@
+#Encapsulation in Python
+
+# class test:
+#     def __init__(self,a,b):
+#         self.a = a
+#         self.b = b
+#
+# t = test(55,99)
+# print(t.a)
+# print(t.b)
+#
+# t.a = 5566
+# print(t.a)
+
+class car:
+    def __init__(self,model,year,color,speed):
+        self.__model = model
+        self.__year = year
+        self.__color = color
+        self.__speed = 0
+
+    def set_speed(self,speed):
+        self.__speed = 0 if speed < 0 else speed
+
+    def get_speed(self):
+        return self.__speed
+
+c = car(2021,2020,"Black",0)
+# c.model = 2200
+# print(c._car__model)
+# print(c._car__year)
+# print(c._car__color)
+#
+# d = car(2100,2018,"White",0)
+# print(d._car__model)
+
+print(c.set_speed(-20))
+print(c.get_speed())
+
+print(c.set_speed(50))
+print(c.get_speed())
+
+class bank_balance:
+    def __init__(self,balance):
+        self.__balance = balance
+
+    def deposit(self,amount):
+        self.__balance = self.__balance + amount
+
+    def withdraw(self,amount):
+        if self.__balance >= amount:
+            self.__balance = self.__balance - amount
+            return "Done"
+        else:
+            return "Insufficient balance"
+
+    def get_balance(self):
+        return self.__balance
+
+jatin = bank_balance(5000)
+print(jatin.get_balance())
+print(jatin.deposit(5000))
+print(jatin.get_balance())
+print(jatin.withdraw(7000))
+print(jatin.get_balance())
+print(jatin.withdraw(5000))
