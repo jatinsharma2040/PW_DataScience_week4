@@ -1,0 +1,27 @@
+#Polymorphism in Python
+
+# def test(a,b):
+#     return a+b
+#
+# print(test(5,5))
+# print(test("Brock ","Lesnar"))
+# print(test([1,2,5,6,9],[26,87,96,58,65]))
+# print(test((1,58,96,74,54),(26,84,96,78,23)))
+
+class data_science:
+    def syllabus(self):
+        print("This course is for Data Science students and this provide the whole syllabus")
+
+class web_dev:
+    def syllabus(self):
+        print("This course is for Web Development students and this provide the whole syllabus")
+
+data_science = data_science()
+web_dev = web_dev()
+
+class_obj = [data_science,web_dev]
+def class_details(class_obj):
+    for i in class_obj:
+        i.syllabus()
+
+print(class_details(class_obj))
