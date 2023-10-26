@@ -1,0 +1,42 @@
+# Decorator in Python
+def test():
+    print("This is the start of my function")
+    print("This is my fun to test fun")
+    print(4+5)
+    print("This is the end of my funtion")
+
+print(test())
+
+def deco(func):
+    def inner_doc():
+        print("This is the start of my fun")
+        func()
+        print("This is the end of my fun")
+
+    return inner_doc()
+
+@deco
+def test1():
+    print(6+6)
+# print(test1())
+
+
+import time
+def timer_test(func):
+    def timer_test_inner():
+        start = time.time()
+        func()
+        end = time.time()
+        print(end - start)
+
+    return timer_test_inner()
+@timer_test
+def test2():
+    print(55+5555)
+
+# print(test2())
+
+@timer_test
+def test3():
+    for i in range(100000):
+        pass
