@@ -1,0 +1,36 @@
+# Abstract class
+import abc
+class pwskills:
+    @abc.abstractmethod
+    def students_details(self):
+        pass
+
+    @abc.abstractmethod
+    def students_marks(self):
+        pass
+
+    @abc.abstractmethod
+    def students_assignment(self):
+        pass
+
+class students_details(pwskills):
+    def students_details(self):
+        return "This is a method for taking students details"
+
+    def students_marks(self):
+        return "This is a method for asking details for a particular student"
+
+class data_science_masters(pwskills):
+    def students_details(self):
+        return "This will return the details of students for data science masters"
+
+    def students_assignment(self):
+        return "This will give the details of student's assignment for data science masters"
+
+obj_DSM = data_science_masters()
+print(obj_DSM.students_assignment())
+print(obj_DSM.students_details())
+
+obj_SD = students_details()
+print(obj_SD.students_details())
+print(obj_SD.students_marks())
